@@ -23,11 +23,10 @@ st.write("""
 # Zone de saisie de texte
 user_name = st.text_input("Quel est votre nom ?")
 
-st.write(user_name)
-print(user_name)
-
 # Création d'un bouton
-
+if st.button("Press OK"):
+  st.write(user_name)
+  
 
 # Cration d'un slider 
 
