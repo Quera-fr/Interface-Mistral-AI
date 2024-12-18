@@ -161,7 +161,6 @@ def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
 
     return response_assistant, last_interactions
 
-
 def training_model_mistral(training_file:str, suffix="university_KD") -> str:
 
     # Envoi du fichier d'entrainement
@@ -189,5 +188,4 @@ def training_model_mistral(training_file:str, suffix="university_KD") -> str:
     while retrieved_jobs.status != 'SUCCEEDED':
         sleep(5)
         retrieved_jobs = client.fine_tuning.jobs.get(job_id = created_jobs.id)
-   
    return retrieved_jobs.fine_tuned_model
