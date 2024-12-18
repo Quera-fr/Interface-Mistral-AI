@@ -9,16 +9,18 @@ st.subheader("Mistral AI")
 # Création d'une zone de texte
 st.write("Introduction à mistral AI")
 
-st.write("""
 
-# Titre
-## Sous-titre
-
-**Text**
-
-  `print("Hello World")`
-
-""")
+if st.checkbox('Afficher le contenu'):
+  st.write("""
+  
+  # Titre
+  ## Sous-titre
+  
+  **Text**
+  
+    `print("Hello World")`
+  
+  """)
 
 # Zone de saisie de texte
 user_name = st.text_input("Quel est votre nom ?")
