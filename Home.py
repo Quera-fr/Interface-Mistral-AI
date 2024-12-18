@@ -49,7 +49,7 @@ path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main
 
 df = pd.read_csv(path_url, sep=';')
 
-edited_df = st.data_editor(df)
+edited_df = st.data_editor(df).to_csv().encode("utf-8")
 
 st.download_button(
     label="Download data as CSV",
