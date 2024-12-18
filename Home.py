@@ -31,11 +31,12 @@ if st.button("Press OK"):
 
 
 # Image
-st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
+st.sidebare.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
 
 # Video
-st.video("https://www.youtube.com/watch?v=h9_UZbw7eX8&t=7s")
+st.sidebare.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 # Cration d'un slider 
+
 
 # Lecture d'un fichier csv avec pandas
