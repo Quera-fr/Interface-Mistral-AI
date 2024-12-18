@@ -49,4 +49,4 @@ path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main
 
 df = pd.read_csv(path_url)
 
-st.write(df, sep=';')
+st.write(df, delimiter=';')
