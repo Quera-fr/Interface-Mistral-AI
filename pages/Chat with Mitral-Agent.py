@@ -23,7 +23,7 @@ if prompt := st.chat_input("What is up?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     
-    response = get_agent_response(client, prompt, last_interactions=st.session_state.messages)
+    response = get_agent_response(client, prompt, agent="ag:56f583a3:20241216:scrum-master:958c674c", last_interactions=st.session_state.messages)
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)
