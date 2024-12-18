@@ -162,7 +162,7 @@ def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
     return response_assistant, last_interactions
 
 
-def training_model_mistral(training_file:str, suffix="university_KD"): -> str
+def training_model_mistral(training_file:str, suffix="university_KD") -> str:
 
     # Envoi du fichier d'entrainement
     training_data = client.files.upload(
