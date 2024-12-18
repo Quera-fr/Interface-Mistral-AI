@@ -49,4 +49,5 @@ path_url = "https://raw.githubusercontent.com/Quera-fr/My-Credit/refs/heads/main
 
 df = pd.read_csv(path_url, sep=';')
 
-st.write(df)
+edited_df = st.data_editor(df)
+
