@@ -188,7 +188,7 @@ def training_model_mistral(client, training_file:str, suffix="university_KD"):
     
     return retrieved_jobs.fine_tuned_model
 
-def get_agent_response(client, agent="ag:d69536f5:20241216:untitled-agent:8913b746", prompt:str='Qui es-tu ?', last_interactions=[]):
+def get_agent_response(client,  prompt:str='Qui es-tu ?',agent="ag:d69536f5:20241216:untitled-agent:8913b746", last_interactions=[]):
     """
     Fonction qui retourne la réponse de l'agent et l'historique des interactions.
     """
