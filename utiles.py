@@ -187,3 +187,25 @@ def training_model_mistral(client, training_file:str, suffix="university_KD"):
         retrieved_jobs = client.fine_tuning.jobs.get(job_id = created_jobs.id)
     
     return retrieved_jobs.fine_tuned_model
+
+def get_agent_response(client, agent="ag:d69536f5:20241216:untitled-agent:8913b746", prompt:str='Qui es-tu ?', last_interactions=[]):
+    """
+    Fonction qui retourne la réponse de l'agent et l'historique des interactions.
+    """
+
+    # Requêtte vers l'API (Agent Culture-G)
+    chat_response = client.agents.complete(
+        agent_id=agent,
+        messages=last_interactions+[
+
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+    )
+
+    # Réponse de l'API
+    response_assistant = chat_response.choices[0].message.content
+
+    return response_assistant
