@@ -161,8 +161,7 @@ def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
 
     return response_assistant, last_interactions
 
-def training_model_mistral(training_file:str, suffix="university_KD") -> str:
-
+def training_model_mistral(training_file:str, suffix="university_KD"):
     # Envoi du fichier d'entrainement
     training_data = client.files.upload(
         file={
@@ -170,7 +169,6 @@ def training_model_mistral(training_file:str, suffix="university_KD") -> str:
             "content": open(f"{training_file}.jsonl", "rb"),
         }
     )
-
     # Creation d'un fine-tuning job
     created_jobs = client.fine_tuning.jobs.create(
         model="open-mistral-7b",
@@ -183,9 +181,9 @@ def training_model_mistral(training_file:str, suffix="university_KD") -> str:
         },
         auto_start=True
     )
-
-    # Vérification du statut de l'entraînement
+        # Vérification du statut de l'entraînement
     while retrieved_jobs.status != 'SUCCEEDED':
         sleep(5)
         retrieved_jobs = client.fine_tuning.jobs.get(job_id = created_jobs.id)
-   return retrieved_jobs.fine_tuned_model
+    
+    return retrieved_jobs.fine_tuned_model
