@@ -1,4 +1,9 @@
 import streamlit as st
+from utiles import get_ner
+from mistralai import Mistral
+
+
+client = Mistral(api_key="ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f")
 
 st.title("Echo Bot")
 
@@ -17,8 +22,8 @@ if prompt := st.chat_input("What is up?"):
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
-
-    response = f"Echo: {prompt}"
+    
+    response = get_ner(client, prompt)
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)
