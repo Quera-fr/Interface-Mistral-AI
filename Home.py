@@ -26,8 +26,8 @@ if st.checkbox('Afficher le contenu'):
 user_name = st.text_input("Quel est votre nom ?")
 
 # Création d'un bouton
-if st.button("Press OK"):
-  st.write(user_name)
+#if st.button("Press OK"):
+#  st.write(user_name)
 
 
 # Image
