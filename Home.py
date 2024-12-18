@@ -51,3 +51,10 @@ df = pd.read_csv(path_url, sep=';')
 
 edited_df = st.data_editor(df)
 
+st.download_button(
+    label="Download data as CSV",
+    data=edited_df,
+    file_name="large_df.csv",
+    mime="text/csv",
+)
+
