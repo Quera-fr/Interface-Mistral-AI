@@ -1,5 +1,5 @@
 import streamlit as st
-from utiles import get_ner
+from utiles import get_ner, get_agent_response
 from mistralai import Mistral
 
 
@@ -25,7 +25,7 @@ if prompt := st.chat_input("What is up?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     
-    response = get_ner(client, prompt)
+    response = get_agent_response(client, prompt, last_interactions=st.session_state.messages)
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
         st.markdown(response)
