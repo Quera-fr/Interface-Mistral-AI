@@ -28,7 +28,13 @@ user_name = st.text_input("Quel est votre nom ?")
 # Création d'un bouton
 if st.button("Press OK"):
   st.write(user_name)
-  
+
+
+# Image
+st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png')
+
+# Video
+st.video("https://www.youtube.com/watch?v=h9_UZbw7eX8&t=7s")
 
 # Cration d'un slider 
 
