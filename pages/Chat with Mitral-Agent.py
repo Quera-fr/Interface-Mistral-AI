@@ -3,7 +3,7 @@ from utiles import get_ner, get_agent_response
 from mistralai import Mistral
 
 
-client = Mistral(api_key="3yXPMZeegB0VuKlWur6DFjdyVRGkzwzz")
+client = Mistral(api_key="i2kbZJ3EJWAUuRJXKjoDTgadOhNFaKw8")
 
 st.title("Echo Bot")
 
