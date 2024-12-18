@@ -7,8 +7,6 @@ client = Mistral(api_key="ay4EXIYW5M1jqCtssLjyzRnZjkKwbA5f")
 
 st.title("Echo Bot")
 
-st.write(st.session_state.messages)
-
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
