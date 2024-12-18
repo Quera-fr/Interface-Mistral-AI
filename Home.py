@@ -37,6 +37,6 @@ st.sidebar.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Goog
 st.sidebar.video("https://www.youtube.com/watch?v=sgnrL7yo1TE")
 
 # Cration d'un slider 
-
+st.slider("Quel est votre age ?", [18, 99])
 
 # Lecture d'un fichier csv avec pandas
