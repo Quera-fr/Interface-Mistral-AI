@@ -1,6 +1,5 @@
-
-
-
+import mistralai
+from time import sleep
 
 def get_ner(prompt):
     response = client.chat.complete(
@@ -66,7 +65,6 @@ def get_ner(prompt):
         max_tokens=100
     )
     return eval(response.choices[0].message.content)
-
 
 
 
@@ -163,10 +161,6 @@ def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
 
     return response_assistant, last_interactions
 
-
-
-
-from time import sleep
 
 def training_model_mistral(training_file:str, suffix="university_KD"): -> str
 
