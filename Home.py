@@ -1,4 +1,5 @@
 import streamlit as st
+from functions import *
 
 # Création d'un titre
 st.title('Interface-Mistral-AI')
