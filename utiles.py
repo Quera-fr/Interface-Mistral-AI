@@ -1,7 +1,7 @@
 import mistralai
 from time import sleep
 
-def get_ner(prompt):
+def get_ner(client, prompt):
     response = client.chat.complete(
         model='mistral-large-latest',
         messages = [
@@ -68,7 +68,7 @@ def get_ner(prompt):
 
 
 
-def get_sentiment(prompt):
+def get_sentiment(cleint, prompt):
     # Requêtte vers l'API
     response = client.chat.complete(
         model='mistral-large-latest',
@@ -129,7 +129,7 @@ def get_sentiment(prompt):
     return eval(response.choices[0].message.content)
 
 
-def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
+def get_agent_response(client, prompt:str='Qui es-tu ?', last_interactions=[]):
     """ 
     Fonction qui retourne la réponse de l'agent et l'historique des interactions.
     """
@@ -161,7 +161,7 @@ def get_agent_response(prompt:str='Qui es-tu ?', last_interactions=[]):
 
     return response_assistant, last_interactions
 
-def training_model_mistral(training_file:str, suffix="university_KD"):
+def training_model_mistral(client, training_file:str, suffix="university_KD"):
     # Envoi du fichier d'entrainement
     training_data = client.files.upload(
         file={
