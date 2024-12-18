@@ -195,7 +195,7 @@ def get_agent_response(client,  prompt:str='Qui es-tu ?',agent="ag:d69536f5:2024
 
     # Requêtte vers l'API (Agent Culture-G)
     chat_response = client.agents.complete(
-        agent_id=agent,
+        agent_id='ag:56f583a3:20241214:expert-python:4483fd18',
         messages=last_interactions+[
 
             {
