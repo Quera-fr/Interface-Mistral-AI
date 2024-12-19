@@ -2,7 +2,7 @@ import streamlit as st
 from utiles import get_ner
 
 # Création d'un titre
-st.title('Interface-Mistral-AI - Test')
+st.title('Interface-Mistral-AI - Test- 2024')
 
 # Création d'un sous-titre
 st.subheader("Mistral AI")
